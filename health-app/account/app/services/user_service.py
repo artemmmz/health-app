@@ -1,24 +1,73 @@
-from app.repositories.user_repository import IUserRepository
+from app.core.security import get_hashed_password
+from app.exceptions import AppError
+from app.uow.database import IDatabaseUnitOfWork
 
 
 class UserService:
-    def __init__(self, repository: IUserRepository):
-        self.repository = repository
+    """Service for working with users."""
 
-    async def get_user(self, user_id):
-        return await self.repository.get_user(user_id=user_id)
+    @staticmethod
+    async def add_user(uow: IDatabaseUnitOfWork, data: dict):
+        password = data['password']
+        hashed_password = get_hashed_password(password)
+        data['password'] = hashed_password
+        async with uow:
+            user = await uow.user_repository.add_user(data)
+            return user
 
-    async def get_all_users(self):
-        return await self.repository.get_all()
+    @staticmethod
+    async def get_user(
+        uow: IDatabaseUnitOfWork, only_active: bool = True, **data
+    ):
+        async with uow:
+            return await uow.user_repository.get_user(only_active, **data)
 
-    async def get_all_doctors(self):
-        return await self.repository.get_all_doctors()
+    @staticmethod
+    async def get_user_by_id(
+        uow: IDatabaseUnitOfWork, user_id: int, only_active: bool = True
+    ):
+        async with uow:
+            return await uow.user_repository.get_user(only_active, id_=user_id)
 
-    async def get_doctor(self, doctor_id: int):
-        return await self.repository.get_doctor(user_id=doctor_id)
+    @staticmethod
+    async def get_all_users(
+        uow: IDatabaseUnitOfWork,
+        offset: int = None,
+        limit: int = None,
+        only_active: bool = True,
+        **data,
+    ):
+        async with uow:
+            return await uow.user_repository.get_all_users(
+                only_active, offset, limit, **data
+            )
 
-    async def edit_user(self, user_id: int, data: dict):
-        return await self.repository.update_one(id_=user_id, **data)
+    @staticmethod
+    async def get_users_by_ids(
+        uow: IDatabaseUnitOfWork,
+        user_ids: list[int],
+        only_active: bool = True,
+        offset: int = None,
+        limit: int = None,
+        full_name: str = None,
+    ):
+        async with uow:
+            return await uow.user_repository.get_users_by_ids(
+                user_ids, only_active, offset, limit, full_name
+            )
 
-    async def delete_user(self, user_id: int):
-        ...
+    @staticmethod
+    async def update_user(uow: IDatabaseUnitOfWork, user_id: int, data: dict):
+        if data.get('password'):
+            password = data['password']
+            hashed_password = get_hashed_password(password)
+            data['password'] = hashed_password
+        if len(data) == 0:
+            raise AppError
+        async with uow:
+            return await uow.user_repository.update_user(user_id, **data)
+
+    @staticmethod
+    async def delete_user(uow: IDatabaseUnitOfWork, user_id: int):
+        async with uow:
+            return await uow.user_repository.deactivate_user(user_id)

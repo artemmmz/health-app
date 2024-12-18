@@ -1,25 +1,271 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0b97b80b-8078-47a2-923f-75155c5fbc3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-app/account/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-app/account/migrations/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-app/account/migrations/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-app/account/migrations/script.py.mako" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-app/account/migrations/versions/2024_12_16_1357-23a978409d88.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-app/account/poetry.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health-app/account/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/simbir-health.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simbir-health.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/api/accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/api/accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/api/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/api/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/api/doctor.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/api/doctor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/api/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/core/auth_bearer.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/core/auth_bearer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/core/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/core/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/core/dependencies.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/core/dependencies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/core/redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/core/redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/core/security.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/already_exists.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/already_exists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/forbidden.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/forbidden.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_auth_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_auth_code.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_auth_scheme.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_auth_scheme.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_token_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/invalid_token_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/no_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/no_result.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/exceptions/unauthorized.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/exceptions/unauthorized.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/kafka/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/kafka/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/kafka/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/kafka/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/kafka/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/kafka/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/models/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/models/role_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/models/role_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/models/token_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/models/token_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/models/user_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/models/user_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/kafka/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/kafka/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/redis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/redis/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/redis/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/redis/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/redis/blacklist_token_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/redis/blacklist_token_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/role_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/role_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/services/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/services/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/services/role_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/services/role_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/services/token_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/services/token_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/services/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/uow/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/uow/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/uow/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/uow/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/uow/inmemory.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/uow/inmemory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/utils/datetime.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/utils/datetime.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/app/utils/enums.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/app/utils/enums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/example.env" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/example.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/endpoints/accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/endpoints/accounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/endpoints/authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/endpoints/authentication.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/endpoints/doctor.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/endpoints/doctor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/models/role.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/models/role.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/models/tokens.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/models/tokens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/redis.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/redis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/repositories/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/repositories/blacklist_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/repositories/blacklist_token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/repositories/role.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/repositories/role.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/repositories/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/repositories/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/services/role.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/services/role.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/services/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/services/token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/services/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/services/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health-app/account/tests/utils/uow.py" beforeDir="false" afterPath="$PROJECT_DIR$/health-app/account/tests/utils/uow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/docker/create-postgres-databases.sh" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/docker/create-postgres-databases.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/.env.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/api/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/api/accounts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/api/authentication.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/api/doctor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/api/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/core/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/core/auth_bearer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/core/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/core/security.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/core/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/exceptions/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/models/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/models/token_models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/models/user_models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/repositories/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/repositories/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/repositories/token_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/repositories/user_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/services/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/services/user_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/app/utils/enums.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/example.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/endpoints/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/repositories/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/repositories/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/repositories/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simbir-health/account/tests/services/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;artemmmz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/artemmmz/health-app.git&quot;,
+    &quot;accountId&quot;: &quot;8a72f81f-3606-40a2-9ce3-b760d54b7b6a&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2mCQrSjCjLWlPkfFbVbTp3XE5Kd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Infrastructure.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.ms-account-migration: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.ms-accounts: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infrastructure.kafka-setup: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infrastructure.kafka-ui: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infrastructure.kafka: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infrastructure.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infrastructure.prometheus: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.infrastructure.redis: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;FastAPI.Account.executor&quot;: &quot;Run&quot;,
+    &quot;FastAPI.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Account tests.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Account.endpoints.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Account.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Account.models.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Account.services.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for authentication.TestAuthentication.test_signup_correct.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for base.SQLModelRepositoryTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for base.SQLModelRepositoryTestCase.test_check_connection.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for base.SQLModelRepositoryTestCase.test_connection.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.repositories.role.TestRoleRepository.test_add_or_activate_role_correct_active.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.repositories.role.TestRoleRepository.test_add_role_incorrect_exists_constraint.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.services.token.TestTokenService.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.services.token.TestTokenService.test_blacklist_token.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for tests.services.token.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for user.UserRepositoryTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for user.UserRepositoryTestCase.test_correct_add_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for user.UserRepositoryTestCase.test_incorrect_add_user_passwords_match.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.endpoints.authentication.TestAuthentication.test_signup_correct.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.endpoints.authentication.TestSignUp.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.models.user.TestUser.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.models.user.TestUser.test_user_incorrect_username.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.models.user.TestUserRole.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.blacklist_token.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.role.TestRoleRepository.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.role.TestRoleRepository.test_add_or_activate_role_correct_activate.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.role.TestRoleRepository.test_add_or_activate_role_correct_active.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.role.TestRoleRepository.test_add_or_activate_role_correct_add.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.role.TestRoleRepository.test_add_role_correct.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.role.TestRoleRepository.test_remove_role_correct.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.token.TestTokenRepository.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.user.TestUserRepository.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.user.TestUserRepository.test_update_user_correct.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.user.TestUserRepository.test_user_create_correct.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.user.TestUserRepository.test_user_create_incorrect_exists_username.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.user.test_create_user.executor&quot;: &quot;Debug&quot;,
+    &quot;Python tests.pytest for tests.repositories.user.test_get_all_users.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.repositories.user.test_get_incorrect_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.services.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.services.role.TestRoleService.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.services.user.TestUserService.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.services.user.TestUserService.test_add_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.services.user.TestUserService.test_get_user.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kafka.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/Artem/PycharmProjects/simbir-health/health-app/account&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;redis&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/health-app/account/app/kafka" />
+      <recent name="$PROJECT_DIR$/health-app/account/app/repositories/redis" />
+      <recent name="$PROJECT_DIR$/health-app/account/app/repositories/sqlalchemy" />
+      <recent name="$PROJECT_DIR$/infrastructure/prometheus_config" />
+      <recent name="$PROJECT_DIR$/infrastructure/prometheusconfig/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compose.yml.ms-accounts: Compose Deployment">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="simbir-health" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -28,12 +274,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/health-app/account" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
-      <option name="PARAMETERS" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/health-app/account/app/kafka/main.py" />
+      <option name="PARAMETERS" value="worker" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -41,6 +288,201 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Account" type="Python.FastAPI">
+      <option name="additionalOptions" value="--host 0.0.0.0 --port 8001 --reload" />
+      <option name="appName" value="app" />
+      <option name="file" value="$PROJECT_DIR$/health-app/account/app/main.py" />
+      <module name="simbir-health" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/health-app/account" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.ms-account-migration: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="ms-account-migration" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.ms-accounts: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="ms-accounts" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="infrastructure.kafka-ui: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-ui" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="infrastructure/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Account" type="tests" factoryName="py.test">
+      <module name="simbir-health" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Poetry (simbir-health)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/health-app/account" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/health-app/account&quot;" />
+      <option name="_new_targetType" value="&quot;CUSTOM&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Account.endpoints" type="tests" factoryName="py.test">
+      <module name="simbir-health" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Poetry (simbir-health)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/health-app/account" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;tests/endpoints/authentication.py tests/endpoints/accounts.py tests/endpoints/doctor.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/health-app/account&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Account.models" type="tests" factoryName="py.test">
+      <module name="simbir-health" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Poetry (simbir-health)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;tests/models/role.py tests/models/user.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/health-app/account&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Account.repositories" type="tests" factoryName="py.test">
+      <module name="simbir-health" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Poetry (simbir-health)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/health-app/account" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;tests/repositories/blacklist_token.py tests/repositories/role.py tests/repositories/user.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/health-app/account&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Account.services" type="tests" factoryName="py.test">
+      <module name="simbir-health" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Poetry (simbir-health)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/health-app/account" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;tests/services/role.py tests/services/token.py tests/services/user.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/health-app/account&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml.ms-account-migration: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.ms-accounts: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.infrastructure.kafka-ui: Compose Deployment" />
+      <item itemvalue="FastAPI.Account" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python tests.Account" />
+      <item itemvalue="Python tests.Account.endpoints" />
+      <item itemvalue="Python tests.Account.models" />
+      <item itemvalue="Python tests.Account.repositories" />
+      <item itemvalue="Python tests.Account.services" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.ms-accounts: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.ms-account-migration: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Docker.infrastructure.kafka-ui: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.180" />
+        <option value="bundled-python-sdk-85c76a3b01b3-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.180" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -50,18 +492,97 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726578276095</updated>
+      <workItem from="1730042342361" duration="3535000" />
+      <workItem from="1730051330739" duration="3662000" />
+      <workItem from="1730103611757" duration="292000" />
+      <workItem from="1730104347452" duration="6528000" />
+      <workItem from="1730191515309" duration="49000" />
+      <workItem from="1730191570565" duration="97000" />
+      <workItem from="1730192963671" duration="8206000" />
+      <workItem from="1730205403365" duration="14269000" />
+      <workItem from="1730363644528" duration="2208000" />
+      <workItem from="1730366323559" duration="40355000" />
+      <workItem from="1730545211046" duration="8623000" />
+      <workItem from="1730574761900" duration="45130000" />
+      <workItem from="1730806491089" duration="12874000" />
+      <workItem from="1730983675251" duration="3227000" />
+      <workItem from="1731400712132" duration="3859000" />
+      <workItem from="1731479248364" duration="2698000" />
+      <workItem from="1731588753907" duration="5669000" />
+      <workItem from="1731839293079" duration="6086000" />
+      <workItem from="1731926447003" duration="67665000" />
+      <workItem from="1732279715947" duration="477000" />
+      <workItem from="1732370591140" duration="34000" />
+      <workItem from="1732464323743" duration="7046000" />
+      <workItem from="1732524646538" duration="13073000" />
+      <workItem from="1732561480487" duration="13798000" />
+      <workItem from="1732724486958" duration="1077000" />
+      <workItem from="1732867382455" duration="88000" />
+      <workItem from="1733048625288" duration="201000" />
+      <workItem from="1733049350848" duration="47273000" />
+      <workItem from="1733213411479" duration="4777000" />
+      <workItem from="1733229873542" duration="211000" />
+      <workItem from="1733245444101" duration="7600000" />
+      <workItem from="1733305448206" duration="19942000" />
+      <workItem from="1733387443015" duration="2678000" />
+      <workItem from="1733390296503" duration="8872000" />
+      <workItem from="1733399798110" duration="6769000" />
+      <workItem from="1733410063316" duration="5000" />
+      <workItem from="1733465751627" duration="7966000" />
+      <workItem from="1733586882883" duration="9168000" />
+      <workItem from="1733736277981" duration="14284000" />
+      <workItem from="1733767767966" duration="8878000" />
+      <workItem from="1733841649268" duration="5974000" />
+      <workItem from="1733894802276" duration="7000" />
+      <workItem from="1733899839245" duration="19551000" />
+      <workItem from="1734000076670" duration="10699000" />
+      <workItem from="1734011470827" duration="16005000" />
+      <workItem from="1734101766952" duration="28420000" />
+      <workItem from="1734341034333" duration="19024000" />
+      <workItem from="1734456349375" duration="5751000" />
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/simbir_health$Account_services.coverage" NAME="Account.services Coverage Results" MODIFIED="1734009722951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_services_user_TestUserService.coverage" NAME="pytest for tests.services.user.TestUserService Coverage Results" MODIFIED="1734005609486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_user_TestUserRepository.coverage" NAME="pytest for tests.repositories.user.TestUserRepository Coverage Results" MODIFIED="1733393313110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_role_TestRoleRepository_test_add_or_activate_role_correct_add.coverage" NAME="pytest for tests.repositories.role.TestRoleRepository.test_add_or_activate_role_correct_add Coverage Results" MODIFIED="1733399158922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_services.coverage" NAME="pytest for tests.services Coverage Results" MODIFIED="1732015928427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$kafka.coverage" NAME="main Coverage Results" MODIFIED="1734341899178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest.coverage" NAME="Account Coverage Results" MODIFIED="1730574727571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_endpoints_authentication_TestAuthentication_test_signup_correct.coverage" NAME="pytest for tests.endpoints.authentication.TestAuthentication.test_signup_correct Coverage Results" MODIFIED="1734112824395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories.coverage" NAME="pytest for tests.repositories Coverage Results" MODIFIED="1733388010708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_models_user_TestUserRole.coverage" NAME="pytest for tests.models.user.TestUserRole Coverage Results" MODIFIED="1730662415321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_models_user_TestUser.coverage" NAME="pytest for tests.models.user.TestUser Coverage Results" MODIFIED="1730632857532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$Account.coverage" NAME="Account Coverage Results" MODIFIED="1734344574110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_user_TestUserRepository_test_user_create_correct.coverage" NAME="pytest for tests.repositories.user.TestUserRepository.test_user_create_correct Coverage Results" MODIFIED="1733391370816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_user_test_create_user.coverage" NAME="pytest for tests.repositories.user.test_create_user Coverage Results" MODIFIED="1730547212558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_user_test_get_all_users.coverage" NAME="pytest for tests.repositories.user.test_get_all_users Coverage Results" MODIFIED="1730581281133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_user_TestUserRepository_test_update_user_correct.coverage" NAME="pytest for tests.repositories.user.TestUserRepository.test_update_user_correct Coverage Results" MODIFIED="1733393303164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_role_TestRoleRepository_test_remove_role_correct.coverage" NAME="pytest for tests.repositories.role.TestRoleRepository.test_remove_role_correct Coverage Results" MODIFIED="1733402416912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_token_TestTokenRepository.coverage" NAME="pytest for tests.repositories.token.TestTokenRepository Coverage Results" MODIFIED="1731940763673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_role_TestRoleRepository.coverage" NAME="pytest for tests.repositories.role.TestRoleRepository Coverage Results" MODIFIED="1733587986431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_blacklist_token.coverage" NAME="pytest for tests.repositories.blacklist_token Coverage Results" MODIFIED="1733989424594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_user_TestUserRepository_test_user_create_incorrect_exists_username.coverage" NAME="pytest for tests.repositories.user.TestUserRepository.test_user_create_incorrect_exists_username Coverage Results" MODIFIED="1733588140793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_services_user_TestUserService_test_get_user.coverage" NAME="pytest for tests.services.user.TestUserService.test_get_user Coverage Results" MODIFIED="1734003955540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$Account_endpoints.coverage" NAME="Account.endpoints Coverage Results" MODIFIED="1734117447620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$main.coverage" NAME="main Coverage Results" MODIFIED="1733590355289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account/app" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_services_role_TestRoleService.coverage" NAME="pytest for tests.services.role.TestRoleService Coverage Results" MODIFIED="1734006184371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_role_TestRoleRepository_test_add_or_activate_role_correct_activate.coverage" NAME="pytest for tests.repositories.role.TestRoleRepository.test_add_or_activate_role_correct_activate Coverage Results" MODIFIED="1733403775618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_role_TestRoleRepository_test_add_role_correct.coverage" NAME="pytest for tests.repositories.role.TestRoleRepository.test_add_role_correct Coverage Results" MODIFIED="1733397818594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_endpoints_authentication_TestSignUp.coverage" NAME="pytest for tests.endpoints.authentication.TestSignUp Coverage Results" MODIFIED="1734017803352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_role_TestRoleRepository_test_add_or_activate_role_correct_active.coverage" NAME="pytest for tests.repositories.role.TestRoleRepository.test_add_or_activate_role_correct_active Coverage Results" MODIFIED="1733989584942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_repositories_user_test_get_incorrect_user.coverage" NAME="pytest for tests.repositories.user.test_get_incorrect_user Coverage Results" MODIFIED="1730580433326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_models_user_TestUser_test_user_incorrect_username.coverage" NAME="pytest for tests.models.user.TestUser.test_user_incorrect_username Coverage Results" MODIFIED="1730631550847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$pytest_for_tests_services_user_TestUserService_test_add_user.coverage" NAME="pytest for tests.services.user.TestUserService.test_add_user Coverage Results" MODIFIED="1734003934575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account" />
+    <SUITE FILE_PATH="coverage/simbir_health$.coverage" NAME=" Coverage Results" MODIFIED="1734112794115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/health-app/account/tests/endpoints" />
+    <SUITE FILE_PATH="coverage/simbir_health$Account_models.coverage" NAME="Account.models Coverage Results" MODIFIED="1734009668995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

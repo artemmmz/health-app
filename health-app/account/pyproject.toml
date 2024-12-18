@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "health-app-account"
+version = "v1"
+description = "Account microservice"
+authors = ["Artem Zlobin <arzar0046@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+alembic = "^1.13.3"
+asyncpg = "^0.30.0"
+fastapi = "^0.115.6"
+passlib = "^1.7.4"
+pydantic = "^2.9.2"
+pydantic-settings = "^2.6.1"
+sqlalchemy = "^2.0.36"
+sqlmodel = "^0.0.22"
+uvicorn = "^0.32.0"
+types-passlib = "^1.7.7.20240819"
+pyjwt = "^2.10.1"
+faust-streaming = "^0.11.3"
+redis = {extras = ["hiredis"], version = "^5.2.1"}
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.1"
+black = "^24.10.0"
+mypy = "^1.13.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = {git = "https://github.com/pytest-dev/pytest-asyncio.git"}
+pytest-mock = "^3.14.0"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v"
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "class"
+testpaths = [
+    "tests/models/role.py",
+    "tests/models/user.py",
+    "tests/database.py",
+    "tests/repositories/base.py",
+    "tests/repositories/user.py",
+    "tests/repositories/role.py",
+    "tests/repositories/blacklist_token.py",
+    "tests/utils/uow.py",
+    "tests/services/user.py",
+    "tests/services/role.py",
+    "tests/services/token.py",
+    "tests/app.py",
+    "tests/endpoints/accounts.py",
+    "tests/endpoints/authentication.py",
+    "tests/endpoints/doctor.py",
+]
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+target-version = ['py39', 'py310', 'py311', 'py312']
+exclude = """
+/(
+__pycache__
+|.venv
+)/
+"""
+
+[tool.mypy]
+python_version = "3.12"
+files = [
+    "app",
+    "tests"
+]
+show_absolute_path = true

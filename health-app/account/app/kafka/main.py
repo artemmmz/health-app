@@ -1,15 +1,16 @@
-from faust import App, Record, StreamT
+from faust import StreamT, Stream
 
-from app.core.settings import settings
+from app.kafka.app import app
 
-app = App('health-app-accounts', broker=settings.KAFKA_BROKER)
+token_topic = app.topic('token-topic')
+account_topic = app.topic('account-topic')
 
-accounts_topic = app.topic('ms-accounts')
+valid_account_topic = app.topic('valid-account-topic')
 
 
-@app.agent(accounts_topic)
-async def introspection_token(stream: StreamT):
-    async for record in await stream.items():
+@app.agent(token_topic)
+async def process_tokens(stream: Stream | StreamT):
+    async for record in stream.items():
         print(f'record: {record}')
 
 

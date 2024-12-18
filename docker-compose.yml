@@ -1,0 +1,75 @@
+services:
+  postgres:
+    image: postgres:${PG_VERSION}
+    restart: always
+    environment:
+      POSTGRES_DATABASE: postgres
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: postgres
+
+      MS_ACCOUNTS_USER: accounts
+      MS_ACCOUNTS_DB: accounts
+      MS_ACCOUNTS_PASSWORD: postgres
+    volumes:
+      - ./postgres-data:/var/lib/postgresql
+      - ./infrastructure/docker/create-postgres-databases.sh:/docker-entrypoint-initdb.d/create-postgres-databases.sh
+    ports:
+      - ${PG_PORT}:5432
+
+  redis:
+    image: redis:${REDIS_VERSION}
+    environment:
+      - REDIS_PASSWORD=redis
+      - REDIS_USER=redis
+      - REDIS_USER_PASSWORD=redis
+    ports:
+      - ${REDIS_PORT}:6379
+    volumes:
+      - ./redis-data:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "-a", "$REDIS_PASSWORD", "ping" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  ms-accounts:
+    build: health-app/account
+    ports:
+      - ${MS_ACCOUNTS_PORT}:8000
+    environment:
+      - MODE=production
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_USER=${MS_ACCOUNTS_PG_USER}
+      - POSTGRES_PASSWORD=${MS_ACCOUNTS_PG_PASSWORD}
+      - POSTGRES_DB=${MS_ACCOUNTS_PG_DB}
+      - KAFKA_HOST=kafka
+      - KAFKA_PORT=${KAFKA_PORT}
+      - REDIS_HOST=redis
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_USER=redis
+      - REDIS_PASSWORD=redis
+      - REDIS_DB=0
+    restart: unless-stopped
+
+  ms-account-migration:
+    build: health-app/account
+    depends_on:
+      - ms-accounts
+    environment:
+      - MODE=production
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=${PG_PORT}
+      - POSTGRES_USER=${MS_ACCOUNTS_PG_USER}
+      - POSTGRES_PASSWORD=${MS_ACCOUNTS_PG_PASSWORD}
+      - POSTGRES_DB=${MS_ACCOUNTS_PG_DB}
+      - KAFKA_HOST=kafka
+      - KAFKA_PORT=${KAFKA_PORT}
+      - REDIS_HOST=redis
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_USER=redis
+      - REDIS_PASSWORD=redis
+      - REDIS_DB=0
+    restart: no
+    command: bash -c "alembic upgrade head"

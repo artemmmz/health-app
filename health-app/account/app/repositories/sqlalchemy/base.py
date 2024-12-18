@@ -1,8 +1,7 @@
-import logging
 from abc import ABC, abstractmethod
-from typing import Type, List, Any
+from typing import Type, List, Any, Optional
 
-from asyncpg import UniqueViolationError
+from asyncpg import UniqueViolationError  # type: ignore
 from sqlalchemy import Result
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.exc import SQLAlchemyError, NoResultFound, IntegrityError
@@ -11,40 +10,24 @@ from sqlmodel import select, update
 
 from app.exceptions import NoResultError, AlreadyExistsError, AppError
 from app.models.base import BaseTableModel
+from app.repositories.base import AbstractRepository
+
+_T = Type[BaseTableModel] | BaseTableModel
 
 
-class AbstractDBRepository(ABC):
-    """Abstract repository for working with data."""
-    @abstractmethod
-    async def get_one(self, *args, **kwargs):
-        raise NotImplementedError
-
+class IDatabaseRepository(AbstractRepository, ABC):
     @abstractmethod
     async def get_one_or_none(self, *args, **kwargs):
-        raise NotImplementedError
-
-    @abstractmethod
-    async def get_all(self, *args, **kwargs):
-        raise NotImplementedError
-
-    @abstractmethod
-    async def add_one(self, *args, **kwargs):
         raise NotImplementedError
 
     @abstractmethod
     async def add_many(self, *args, **kwargs):
         raise NotImplementedError
 
-    @abstractmethod
-    async def update_one(self, filter_data: dict, **data):
-        raise NotImplementedError
 
-
-_T = Type[BaseTableModel] | BaseTableModel
-
-
-class SQLModelRepository(AbstractDBRepository, ABC):
+class SQLModelRepository(IDatabaseRepository, ABC):
     """Repository for working with data via sqlmodel and sqlalchemy."""
+
     model: _T
 
     def __init__(self, session: AsyncSession):
@@ -60,10 +43,10 @@ class SQLModelRepository(AbstractDBRepository, ABC):
 
     def _get_update_statement(self, filter_data: dict, **data):
         statement = (
-            update(self.model)
+            update(self.model)  # type: ignore
             .filter_by(**filter_data)
             .values(**data)
-            .returning(self.model)
+            .returning(self.model)  # type: ignore
         )
         return statement
 
@@ -72,12 +55,10 @@ class SQLModelRepository(AbstractDBRepository, ABC):
         data: dict,
         constraint: str | None = None,
         index_elements: list | None = None,
-        set_data: dict | None = None
+        set_data: dict | None = None,
     ):
         statement = self._get_insert_statement(**data).on_conflict_do_update(
-            constraint=constraint,
-            index_elements=index_elements,
-            set_=set_data
+            constraint=constraint, index_elements=index_elements, set_=set_data
         )
         return statement
 
@@ -101,7 +82,10 @@ class SQLModelRepository(AbstractDBRepository, ABC):
         try:
             await self.session.commit()
         except IntegrityError as e:
-            if e.orig.sqlstate == UniqueViolationError.sqlstate:
+            if (
+                e.orig.sqlstate  # type: ignore
+                == UniqueViolationError.sqlstate
+            ):
                 raise AlreadyExistsError(self.model)
             raise AppError
 
@@ -136,7 +120,7 @@ class SQLModelRepository(AbstractDBRepository, ABC):
         return await self._fetch_one_or_none(statement)
 
     async def get_all(
-        self, offset: int = None, limit: int = None, **data
+        self, offset: Optional[int] = None, limit: Optional[int] = None, **data
     ) -> list[_T]:
         statement = self._get_select_statement(**data)
         if offset is not None:
@@ -145,7 +129,7 @@ class SQLModelRepository(AbstractDBRepository, ABC):
             statement = statement.limit(limit)
         return await self._fetch_all(statement)
 
-    async def add_one(self, instance: _T | None = None, **data) -> _T:
+    async def add_one(self, instance: Optional[_T] = None, **data) -> _T:
         if instance is None:
             instance = self.model(**data)
         await self._add(instance)
@@ -154,7 +138,7 @@ class SQLModelRepository(AbstractDBRepository, ABC):
         return instance
 
     async def add_many(
-        self, *datas: dict[str, Any], instances: List[_T] | None = None
+        self, *datas: dict[str, Any], instances: Optional[List[_T]] = None
     ) -> list[_T]:
         if instances is None:
             instances = []

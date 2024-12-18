@@ -1,0 +1,7 @@
+.*_cache
+.venv
+.env.example
+.env.test
+README.md
+*-data
+*-logs

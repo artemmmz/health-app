@@ -2,8 +2,24 @@ from enum import Enum
 
 
 class Role(str, Enum):
-    INACTIVE = 'inactive'
+    """Roles enum."""
+
     USER = 'user'
     DOCTOR = 'doctor'
     ADMIN = 'admin'
     MANAGER = 'manager'
+
+
+class TokenStatus(str, Enum):
+    """Token status enum."""
+
+    ACTIVE = 'active'
+    EXPIRED = 'expired'
+    BLACKLISTED = 'blacklisted'
+
+
+class TokenType(str, Enum):
+    """Token type enum."""
+
+    ACCESS = 'access'
+    REFRESH = 'refresh'

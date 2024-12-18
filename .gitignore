@@ -1,0 +1,8 @@
+.idea
+.env
+.env.test
+.vscode
+
+*-data
+*-logs
+

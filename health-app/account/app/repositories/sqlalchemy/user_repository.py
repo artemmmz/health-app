@@ -4,11 +4,15 @@ from typing import List
 from sqlmodel import select
 
 from app.models.user_models import User
-from app.repositories.base import SQLModelRepository, AbstractDBRepository
+from app.repositories.sqlalchemy.base import (
+    SQLModelRepository,
+    AbstractRepository,
+)
 
 
-class IUserRepository(AbstractDBRepository, ABC):
+class IUserRepository(AbstractRepository, ABC):
     """Interface for user repository."""
+
     @abstractmethod
     async def add_user(self, data):
         raise NotImplementedError
@@ -49,6 +53,7 @@ class IUserRepository(AbstractDBRepository, ABC):
 
 class UserRepository(IUserRepository, SQLModelRepository, ABC):
     """User repository for working with data via sqlmodel and sqlalchemy."""
+
     model = User
 
     async def add_user(self, data: dict) -> User:
@@ -79,12 +84,14 @@ class UserRepository(IUserRepository, SQLModelRepository, ABC):
         limit: int = None,
         full_name: str = None,
     ) -> list[User]:
-        statement = select(self.model).where(self.model.id_.in_(user_ids))  # type: ignore
+        statement = select(self.model).where(
+            self.model.id_.in_(user_ids)  # type: ignore
+        )  # type: ignore
         if full_name:
             statement = statement.where(
-                (self.model.first_name + ' ' + self.model.last_name).like(  # type: ignore
-                    full_name
-                )
+                (  # type: ignore
+                    self.model.first_name + ' ' + self.model.last_name
+                ).like(full_name)
             )
         if only_active:
             statement = statement.filter_by(is_active_=True)
