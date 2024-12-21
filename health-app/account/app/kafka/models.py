@@ -1,19 +1,15 @@
 import uuid
-from typing import Any
+from typing import Any, Optional
 
 from faust import Record
 
-
-class TokenEvent(Record):
-    token_id: str | uuid.UUID
-    user_id: int
+from app.utils.enums import SessionAction
 
 
-class AccountInfo(Record):
-    user_id: int
-    detail: dict[str, str | dict]
-
-
-class Timetable(Record):
-    doctor_id: int
-    timetable: list[dict[str, Any]]
+class Session(Record, serializer='json'):
+    access_token: str
+    action: SessionAction = SessionAction.CREATE
+    token_type: str = 'Bearer'
+    expires_in: Optional[int] = None
+    user_id: Optional[int] = None
+    username: Optional[str] = None

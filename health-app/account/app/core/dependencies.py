@@ -14,9 +14,11 @@ from app.exceptions import (
     InvalidTokenError,
     InvalidTokenTypeError,
 )
+from app.kafka.app import app
 from app.models.role_models import UserRole
 from app.models.user_models import User
 from app.services import UserService, TokenService, RoleService
+from app.uow.broker import IBrokerUnitOfWork, KafkaUOW
 from app.uow.database import SQLAlchemyUOW, IDatabaseUnitOfWork
 from app.uow.inmemory import IInMemoryUnitOfWork, RedisUOW
 from app.utils.enums import Role, TokenType
@@ -33,11 +35,19 @@ def create_inmemory_uow() -> IInMemoryUnitOfWork:
     return RedisUOW()
 
 
+def create_broker_uow() -> IBrokerUnitOfWork:
+    """Create and initialize Kafka Broker Unit Of Work instance."""
+    return KafkaUOW(app)
+
+
 DBDep = Depends(create_db_uow)
 DBAnnotation = Annotated[IDatabaseUnitOfWork, DBDep]
 
 InMemoryDep = Depends(create_inmemory_uow)
 InMemoryAnnotation = Annotated[IInMemoryUnitOfWork, InMemoryDep]
+
+BrokerDep = Depends(create_broker_uow)
+BrokerAnnotation = Annotated[IBrokerUnitOfWork, BrokerDep]
 
 
 # Authentication Section

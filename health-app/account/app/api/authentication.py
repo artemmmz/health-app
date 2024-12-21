@@ -2,11 +2,12 @@ import uuid
 
 from fastapi import APIRouter
 
+from app.api.utils import create_tokens_and_session
 from app.core.dependencies import (
     DBAnnotation,
     TokenAnnotation,
     UserRefreshDep,
-    InMemoryAnnotation,
+    InMemoryAnnotation, BrokerAnnotation,
 )
 from app.core.security import (
     verify_password,
@@ -22,6 +23,7 @@ from app.models.token_models import (
 )
 from app.models.user_models import UserAdd, Authentication
 from app.services import UserService, TokenService, RoleService
+from app.services.session_service import SessionService
 from app.utils.datetime import get_now, get_access_expires, get_refresh_expires
 from app.utils.enums import TokenStatus, Role
 
@@ -29,7 +31,7 @@ router = APIRouter()
 
 
 @router.post('/signup')
-async def signup(data: UserAdd, uow: DBAnnotation) -> Tokens:
+async def signup(data: UserAdd, uow: DBAnnotation, broker_uow: BrokerAnnotation) -> Tokens:
     """Register a new user."""
     password = data.password1.get_secret_value()
     creation_data = data.model_dump(exclude={'password1', 'password2'})
@@ -37,19 +39,11 @@ async def signup(data: UserAdd, uow: DBAnnotation) -> Tokens:
     user = await UserService.add_user(uow, creation_data)
     await RoleService.add_role(uow, user.id_, Role.USER)
 
-    access_token = create_access_token(
-        user_id=user.id_,
-        username=user.username,
-    )
-    refresh_token = create_refresh_token(
-        user_id=user.id_,
-        username=user.username,
-    )
-    return Tokens(access_token=access_token, refresh_token=refresh_token)
+    return await create_tokens_and_session(user, broker_uow)
 
 
 @router.post('/signin')
-async def signin(data: Authentication, uow: DBAnnotation) -> Tokens:
+async def signin(data: Authentication, uow: DBAnnotation, broker_uow: BrokerAnnotation) -> Tokens:
     """Authenticate a user."""
     try:
         user = await UserService.get_user(uow, username=data.username)
@@ -57,20 +51,20 @@ async def signin(data: Authentication, uow: DBAnnotation) -> Tokens:
         raise InvalidLoginError
     if not verify_password(data.password.get_secret_value(), user.password):
         raise InvalidLoginError
-    access_token = create_access_token(
-        user_id=user.id_,
-        username=user.username,
-    )
-    refresh_token = create_refresh_token(
-        user_id=user.id_,
-        username=user.username,
-    )
-    return Tokens(access_token=access_token, refresh_token=refresh_token)
+
+    return await create_tokens_and_session(user, broker_uow)
 
 
-@router.put('/signout', dependencies=[UserRefreshDep])
+@router.put(
+    '/signout',
+    responses={
+        '200': {
+            'content': {'application/json': {'example': {'status': 'ok'}}}
+        }
+   },
+    dependencies=[UserRefreshDep])
 async def signout(
-    token_payload: TokenAnnotation, inmemory: InMemoryAnnotation
+    token_payload: TokenAnnotation, inmemory: InMemoryAnnotation, broker: BrokerAnnotation
 ):
     """Sign out a user."""
     token_id = uuid.UUID(token_payload['jti'])
@@ -98,7 +92,7 @@ async def validate(
 @router.post(
     '/access', response_model_exclude_none=True, dependencies=[UserRefreshDep]
 )
-async def access(refresh_payload: TokenAnnotation) -> Tokens:
+async def access(refresh_payload: TokenAnnotation, broker: BrokerAnnotation) -> Tokens:
     """
     Get new access token from refresh token
     (need refresh token in header).
@@ -113,12 +107,17 @@ async def access(refresh_payload: TokenAnnotation) -> Tokens:
         expires_in=expires_in,
         now=now,
     )
+
+    await SessionService.new_session(
+        broker, access_token, expires_at,
+        refresh_payload['user_id'], refresh_payload['sub']
+    )
     result = Tokens(access_token=access_token, expires_at=expires_at)
     return result
 
 
 @router.post('/refresh', dependencies=[UserRefreshDep])
-async def refresh(refresh_payload: TokenAnnotation) -> Tokens:
+async def refresh(refresh_payload: TokenAnnotation, broker: BrokerAnnotation) -> Tokens:
     """Get a new pair of tokens (need refresh token in header)."""
     token_id = uuid.uuid4()
     now = get_now()
@@ -138,6 +137,11 @@ async def refresh(refresh_payload: TokenAnnotation) -> Tokens:
         token_id,
         expires_in=refresh_expires_in,
         now=now,
+    )
+
+    await SessionService.new_session(
+        broker, access_token, now + access_expires_in,
+        refresh_payload['user_id'], refresh_payload['sub']
     )
 
     result = Tokens(access_token=access_token, refresh_token=refresh_token)

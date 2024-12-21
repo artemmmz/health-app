@@ -23,3 +23,9 @@ class TokenType(str, Enum):
 
     ACCESS = 'access'
     REFRESH = 'refresh'
+
+
+class SessionAction(str, Enum):
+    """Session action enum."""
+    CREATE = 'create'
+    TERMINATE = 'terminate'
